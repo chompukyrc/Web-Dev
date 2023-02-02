@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Test Basic Bootstrap</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+        />
+        <style>
+            .nav-link {
+                font-size: larger;
+                border-radius: 4px;
+                padding-left: 4px;
+                padding-right: 4px;
+                width: 100px;
+                text-align: center;
+            }
+
+            .nav-link:hover {
+                background-color: #e73c7e;
+                color: white;
+            }
+
+            .collapse {
+                padding: 4px;
+                background-color: rgba(255, 255, 255, 0.8);
+                /* opacity: 80%; */
+            }
+
+            .navbar {
+                padding: 0px !important;
+            }
+
+            .container-fluid {
+                padding: 0px !important;
+            }
+
+            .my-container {
+                height: 100vh;
+                display: flex;
+            }
+
+            .my-title-content {
+                font-weight: bold;
+            }
+
+            .my-header {
+                height: 100vh;
+                width: 100vw;
+                background: linear-gradient(
+                    -45deg,
+                    #ee7752,
+                    #e73c7e,
+                    #23a6d5,
+                    #23d5ab
+                );
+                background-size: 400% 400%;
+                animation: gradient 10s ease infinite;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container-fluid">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"
+                                >Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#content1">content1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#content2">content2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#content3">content3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#content4">content4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#content5">content5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#content6">content6</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#content7">content7</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header-->
+        <div class="text-center text-black my-header">
+            <h1 class="mb-0">I am the most</h1>
+            <h2 class="mb-0">beautiful girl in the world</h2>
+        </div>
+
+        <!-- Content section 1-->
+        <section id="content1">
+            <div class="container my-container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5">
+                            <img
+                                class="img-fluid rounded-circle"
+                                src="https://img.freepik.com/free-vector/illustrated-colorful-abstract-parrot_516246-5.jpg?w=740&t=st=1675241326~exp=1675241926~hmac=298168929fb690ef42a22f39ffa01ecd6cce63594f07b3953695106b812ce880"
+                                alt="..."
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="my-title-content">
+                                Ut voluptas placeat qui magni adipisci est vitae
+                                ratione.
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet. Et internos sequi ut
+                                sequi pariatur in quis necessitatibus et
+                                accusantium nesciunt ut internos fuga. Et
+                                impedit saepe At placeat reiciendis rem libero
+                                autem aut tempora consectetur ut dignissimos
+                                fugit aut modi adipisci sit molestiae delectus.
+                                Aut nulla laborum et illo veniam ea perferendis
+                                soluta est laboriosam fuga At alias natus non
+                                labore nulla.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content section 2-->
+        <section id="content2">
+            <div class="container my-container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <img
+                                class="img-fluid rounded-circle"
+                                src="https://img.freepik.com/free-vector/illustrated-colorful-abstract-wild-whale_516246-8.jpg?w=740&t=st=1675248302~exp=1675248902~hmac=9c00945bfb71544eeba3b2d6961a184984764affd598ed574f00fc013a96acea"
+                                alt="..."
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <h2 class="my-title-content">
+                                At nostrum eaque non maiores autem ut quia
+                                laudantium.
+                            </h2>
+                            <p>
+                                Hic deleniti nesciunt sed nobis dolorem qui
+                                aliquam veniam quo iure dolor cum ipsa
+                                cupiditate. Ut commodi eius eos accusamus quam
+                                est consequatur doloribus qui debitis quod qui
+                                fugit pariatur qui itaque molestiae vel omnis
+                                dicta!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content section 3-->
+        <section id="content3">
+            <div class="container my-container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5">
+                            <img
+                                class="img-fluid rounded-circle"
+                                src="https://img.freepik.com/free-vector/illustrated-colorful-abstract-wild-rhinoceros_516246-10.jpg?w=740&t=st=1675248326~exp=1675248926~hmac=fbeb7036166f8bcc652e7374b9f384174d920ccaa7fa4a24145591c3fcc26242"
+                                alt="..."
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="my-title-content">
+                                Ex corrupti eligendi est ullam pariatur.
+                            </h2>
+                            <p>
+                                Est doloribus quod aut soluta dolores est
+                                molestiae alias est rerum maxime est asperiores
+                                unde At laboriosam nisi eos deleniti illo. Et
+                                praesentium quaerat aut ducimus soluta quo
+                                galisum exercitationem cum expedita aspernatur
+                                eos rerum inventore. Qui sunt distinctio ut
+                                labore iste non consequatur facilis! Ad
+                                similique labore aut incidunt reiciendis eos
+                                modi quos cum deleniti quia nam rerum possimus
+                                non aliquid esse eum ducimus internos!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content section 4-->
+        <section id="content4">
+            <div class="container my-container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <img
+                                class="img-fluid rounded-circle"
+                                src="https://img.freepik.com/free-vector/illustrated-colorful-abstract-wild-shark_516246-9.jpg?w=740&t=st=1675248346~exp=1675248946~hmac=534c823a8807edab9d113a03c63b466a127c2bbb0f5dfc1b9f40c542abaa6aa2"
+                                alt="..."
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <h2 class="my-title-content">
+                                Est quaerat quae vel reprehenderit itaque.
+                            </h2>
+                            <p>
+                                Et voluptatem fugiat ea quia ullam a dolor
+                                ratione ut quaerat voluptatum quo rerum fugit.
+                                Est laudantium inventore et aliquid dolores eum
+                                dolores voluptas et fugiat repellendus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content section 5-->
+        <section id="content5">
+            <div class="container my-container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5">
+                            <img
+                                class="img-fluid rounded-circle"
+                                src="https://img.freepik.com/free-vector/illustrated-colorful-abstract-wolf_516246-3.jpg?w=740&t=st=1675248360~exp=1675248960~hmac=c212aeb5d4f1bdc3c2ab3841b771b3eaa82c4bfa9292ad054c3dbbf962f05337"
+                                alt="..."
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="my-title-content">
+                                Cum similique consequatur vel veritatis minus
+                                sit quod quidem.
+                            </h2>
+                            <p>
+                                Et rerum illo ut quaerat autem eos ratione
+                                molestiae et modi similique. Et error
+                                voluptatibus aut tempore voluptatem sed delectus
+                                expedita ut dolor molestiae sit aliquid
+                                necessitatibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content section 6-->
+        <section id="content6">
+            <div class="container my-container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <img
+                                class="img-fluid rounded-circle"
+                                src="https://img.freepik.com/free-vector/illustrated-colorful-abstract-owl_516246-6.jpg?w=740&t=st=1675248373~exp=1675248973~hmac=45282b661d0ee6bb3aed9f7b8e239431c2774144e5457c6a32e83c6409299841"
+                                alt="..."
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <h2 class="my-title-content">
+                                Vel neque inventore et labore Quis non quis
+                                nulla.
+                            </h2>
+                            <p>
+                                Aut quod commodi sed tenetur voluptatem qui
+                                omnis ipsum rem dolores velit. Eum ipsam placeat
+                                et laudantium nulla vel cumque illo non aperiam
+                                modi. Qui laborum suscipit sed voluptas sint aut
+                                quos autem sed molestiae deserunt et
+                                perspiciatis enim.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content section 7-->
+        <section id="content7">
+            <div class="container my-container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5">
+                            <img
+                                class="img-fluid rounded-circle"
+                                src="https://img.freepik.com/free-vector/illustrated-colorful-abstract-turtle_516246-4.jpg?w=740&t=st=1675248389~exp=1675248989~hmac=86025fed74bd73f0896df80214210d428912ead48247f412d4342c845d64d631"
+                                alt="..."
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="my-title-content">
+                                Aut Quis rerum aut dolorum illum et omnis fugit.
+                            </h2>
+                            <p>
+                                Est minima dolore non quam facere sed repellat
+                                amet ut saepe culpa id consequatur quisquam in
+                                alias omnis cum dolorem sunt. Eos dolores
+                                necessitatibus et consectetur nulla ut
+                                doloremque mollitia vel molestiae tenetur?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
