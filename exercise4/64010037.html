@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div id="maincontainer"></div>
+        <script>
+            var myWorker = new Worker("worker.js");
+            let buttonState = true;
+
+            myWorker.onmessage = (ev) => {
+                mybutton.value = ev.data.time;
+                mybutton.style.color = ev.data.color;
+                mybutton.style.backgroundColor = ev.data.mybg;
+                mybutton.style.position = "fixed";
+                mybutton.style.right = "0";
+                mybutton.style.top = "0";
+                mybutton.style.backgroundColor = randomRgba();
+                mybutton.style.color = randomRgba();
+                mybutton.innerText = Date();
+            };
+
+            function randomRgba() {
+                return (
+                    "rgba(" +
+                    Math.round(Math.random() * 255) +
+                    "," +
+                    Math.round(Math.random() * 255) +
+                    "," +
+                    Math.round(Math.random() * 255) +
+                    "," +
+                    Math.random().toFixed(1) +
+                    ")"
+                );
+            }
+
+            function myclick() {
+                if (buttonState) {
+                    myWorker.postMessage({ do: "Start" });
+                } else {
+                    mybutton.style.position = "relative";
+                    myWorker.postMessage({ do: "Stop" });
+                }
+                buttonState = !buttonState;
+            }
+
+            const mainContainer = document.getElementById("maincontainer");
+
+            const myheader = document.createElement("h1");
+            myheader.textContent = "Exercise 04: JavaScript&Dom";
+
+            const mybutton = document.createElement("input");
+            mybutton.addEventListener("click", myclick);
+            mybutton.type = "button";
+            mybutton.value = "Click me to display Date and Time";
+
+            const myDummyButton = document.createElement("input");
+            myDummyButton.style.visibility = "hidden";
+
+            const hideLineDiv = document.createElement("div");
+            hideLineDiv.innerText = "hide";
+            hideLineDiv.style.visibility = "hidden";
+
+            //personal Info
+            const personalInfoWrapper = document.createElement("div");
+            const personalInfo = document.createElement("a");
+            personalInfo.innerText = "Personal Info";
+            personalInfo.href = "#";
+            personalInfo.style.color = "#FF4900";
+
+            //Personal Info Wrapper
+            personalInfoWrapper.appendChild(personalInfo);
+            personalInfo.addEventListener("click", () => {
+                if (ulPersonalInfo.style.display === "none") {
+                    ulPersonalInfo.style.display = "block";
+                } else {
+                    ulPersonalInfo.style.display = "none";
+                }
+            });
+
+            //Personal Info Hover
+            personalInfo.addEventListener("mouseenter", (event) => {
+                // console.log("enter!");
+                personalInfo.style.backgroundColor = "#61E4F4";
+            });
+            personalInfo.addEventListener("mouseleave", (event) => {
+                // console.log("leave!");
+                personalInfo.style.backgroundColor = "#ffff";
+            });
+
+            //Personal Info ul li
+            const ulPersonalInfo = document.createElement("ul");
+            const liPersonalInfo1 = document.createElement("li");
+            const liPersonalInfo2 = document.createElement("li");
+            const liPersonalInfo3 = document.createElement("li");
+            ulPersonalInfo.appendChild(liPersonalInfo1);
+            ulPersonalInfo.appendChild(liPersonalInfo2);
+            ulPersonalInfo.appendChild(liPersonalInfo3);
+            liPersonalInfo1.innerText = "Kanyarat Chaiyanboon, ID: 64010037";
+            liPersonalInfo2.innerText = "Subject: WEB APPLICATION DEVELOPMENT";
+            liPersonalInfo3.innerText = "Semester: 2";
+
+            ulPersonalInfo.style.display = "none";
+
+            //Snapshots
+            const mysnapshot = document.createElement("h1");
+            mysnapshot.textContent = "Snapshots";
+
+            const ulLink = document.createElement("ul");
+            const liLink1 = document.createElement("li");
+            const liLink2 = document.createElement("li");
+            const liLink3 = document.createElement("li");
+            const liLink4 = document.createElement("li");
+            ulLink.appendChild(liLink1);
+            ulLink.appendChild(liLink2);
+            ulLink.appendChild(liLink3);
+            ulLink.appendChild(liLink4);
+            const aliLink1 = document.createElement("a");
+            const aliLink2 = document.createElement("a");
+            const aliLink3 = document.createElement("a");
+            const aliLink4 = document.createElement("a");
+            liLink1.appendChild(aliLink1);
+            liLink2.appendChild(aliLink2);
+            liLink3.appendChild(aliLink3);
+            liLink4.appendChild(aliLink4);
+            aliLink1.innerText = "Fireworks";
+            aliLink2.innerText = "Crest";
+            aliLink3.innerText = "Action";
+            aliLink4.innerText = "Buffalo";
+
+            const imageWrapper = document.createElement("div");
+            const img = document.createElement("img");
+            imageWrapper.appendChild(img);
+            img.src = "https://www.ce.kmitl.ac.th/api/main/banner/download/1"; //base pic
+
+            aliLink1.href =
+                "https://img.freepik.com/free-vector/pyrotechnics-fireworks-city-background-with-city-sky_1284-54177.jpg?w=1380&t=st=1676480613~exp=1676481213~hmac=13c099a7301d80078e83c5ed88566da4cd37027ff4107f487d7b96e11ec9947e";
+            aliLink2.href =
+                "https://img.freepik.com/free-vector/elegant-vintage-ornamental-logo_23-2148315833.jpg?w=740&t=st=1676480784~exp=1676481384~hmac=ae4c442e4497c62325f4a223ba614712a667ce7b0858e3e00a5435fb0da4d628";
+            aliLink3.href =
+                "https://img.freepik.com/free-photo/world-collapse-doomsday-scene-digital-painting_456031-63.jpg?w=1380&t=st=1676480806~exp=1676481406~hmac=5af1ab46805fd9c9e24239d9339f47263066295282d67c464c2b49644e679902";
+            aliLink4.href =
+                "https://img.freepik.com/free-photo/senior-farmer-shirtless-turban-loincloth-touch-buffalo-with-love-take-care-after-working-agricultrue-smoke-background-copy-space-rural-scene-countryside-thailand_1150-55841.jpg?w=1060&t=st=1676480859~exp=1676481459~hmac=83392333b65d3d9201fa461882d6685938794573df460c783accaeb4d564a751";
+
+            aliLink1.addEventListener("click", (e) => {
+                e.preventDefault();
+                img.src = aliLink1.href;
+            });
+            aliLink2.addEventListener("click", (e) => {
+                e.preventDefault();
+                img.src = aliLink2.href;
+            });
+            aliLink3.addEventListener("click", (e) => {
+                e.preventDefault();
+                img.src = aliLink3.href;
+            });
+            aliLink4.addEventListener("click", (e) => {
+                e.preventDefault();
+                img.src = aliLink4.href;
+            });
+
+            //append
+            mainContainer.appendChild(myheader);
+            mainContainer.appendChild(mybutton);
+            mainContainer.appendChild(myDummyButton);
+            mainContainer.appendChild(hideLineDiv);
+            mainContainer.appendChild(personalInfoWrapper);
+            mainContainer.appendChild(ulPersonalInfo);
+            mainContainer.appendChild(mysnapshot);
+            mainContainer.appendChild(ulLink);
+            mainContainer.appendChild(imageWrapper);
+        </script>
+    </body>
+</html>
