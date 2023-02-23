@@ -1,0 +1,23 @@
+[
+    {
+        "titleType": "อาหารคาว",
+        "name": "ข้าวผัด",
+        "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+        "myPic": "https://img.freepik.com/free-photo/american-shrimp-fried-rice-served-with-chili-fish-sauce-thai-food_1150-26576.jpg?w=1060&t=st=1677073744~exp=1677074344~hmac=90a9284efcc3272400dcc5f7e4c95cc2085661fbc5889696b3d0a924d1d312f8",
+        "score": 0
+    },
+    {
+        "titleType": "อาหารหวาน",
+        "name": "ขนมบัวลอย",
+        "description": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "myPic": "https://aroi-mark.com/wp-content/uploads/2020/10/%E0%B8%82%E0%B8%99%E0%B8%A1%E0%B8%9A%E0%B8%B1%E0%B8%A7%E0%B8%A5%E0%B8%AD%E0%B8%A21.jpg",
+        "score": 0
+    },
+    {
+        "titleType": "เครื่องดื่ม",
+        "name": "ชานม",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.",
+        "myPic": "https://bangkok-today.com/wp-content/uploads/2022/12/Espresso-Matcha-Latte-Oat-Milk_Caramel-Macchiato-Nutty-Oat-Milk-850x560.jpg",
+        "score": 0
+    }
+]

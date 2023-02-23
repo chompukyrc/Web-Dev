@@ -1,0 +1,28 @@
+body {
+    background-color: #696969;
+}
+
+p {
+    /* max-height: 73px;
+    width: 450px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
+
+    width: 420px;
+    overflow: hidden;
+    max-height: 5rem;
+    line-height: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    text-overflow: ellipsis;
+    display: block;
+    /* resize: horizontal; */
+}
+
+img {
+    width: 250px;
+    position: absolute;
+    right: 430px;
+    margin-top: 30px;
+}
